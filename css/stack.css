@@ -1,0 +1,472 @@
+.stack {
+  width: 100%; height: 100vh;
+  padding: 80px 20px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* background-color: #F9FAFB; */
+}
+.stack_container {
+  position: relative;
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.stack_container h1 {
+  width: 100%;
+  font-family: "P22 Underground";
+  font-size: 58px;
+  color: #191F28;
+  text-align: center;
+}
+.stack_apps {
+  position: absolute;
+  width: 210px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  top: 550px; 
+  left: 50%;
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+.stack_apps .app_img {
+  width: 70%;
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stack_apps .app_scouter {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stack_apps:hover .app_scouter {
+  opacity: 1;
+}
+.stack_apps .app_scouter p {
+  font-family: "P22 Underground";
+  font-size: 22px;
+  color: #333D4B;
+}
+.stack_apps .app_scouter .gauge {
+  display: flex;
+  justify-content: flex-start;
+}
+.stack_apps .app_scouter .bar {
+  opacity: 0;
+  width: 5px; height: 20px;
+  background-color: #1B64DA;
+  border-radius: 5px;
+  margin-right: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.stack_apps .app_scouter .bar_off {
+  background-color: #B0B8C1;
+}
+.stack_apps:hover .app_scouter .bar {
+  opacity: 1;
+}
+.stack:hover .stack_apps {
+  opacity: 1;
+}
+.stack:hover .threejs {
+  top: 8% ; left: 15% ;
+}
+.stack:hover .html5 {
+  top: 25%; left: 10%;
+}
+.stack:hover .nodejs {
+  top: 40%; left: 25%;
+}
+.stack:hover .jquery {
+  top: 52%; left: 20%;
+}
+.stack:hover .react {
+  top: 60%; left: 10%;
+}
+.stack:hover .git {
+  top: 86%; left: 20%;
+}
+.stack:hover .firebase {
+  top: 20%; left: 30%;
+}
+.stack:hover .github {
+  top: 45%; left: 50%;
+}
+.stack:hover .vscode {
+  top: 25%; left: 55%;
+}
+.stack:hover .flyio {
+  top: 10%; left: 73%;
+}
+.stack:hover .mysql {
+  top: 40%; left: 78%;
+}
+.stack:hover .javascript {
+  top: 55%; left: 75%;
+}
+.stack:hover .css3 {
+  top: 70%; left: 67%;
+}
+.stack:hover .vuejs {
+  top: 85%; left: 78%;
+}
+
+.mysql .app_img {
+  background-image: url(../img/mysql.png);
+}
+.threejs .app_img {
+  background-image: url(../img/threejs.png);
+}
+.html5 .app_img {
+  background-image: url(../img/html5.png);
+}
+.nodejs .app_img {
+  background-image: url(../img/nodejs.png);
+}
+.jquery .app_img {
+  background-image: url(../img/jquery.png);
+}
+.react .app_img {
+  background-image: url(../img/react.png);
+}
+.git .app_img {
+  background-image: url(../img/git.png);
+}
+.firebase .app_img {
+  background-image: url(../img/firebase.png);
+}
+.github .app_img {
+  background-image: url(../img/github.png);
+}
+.vscode .app_img {
+  background-image: url(../img/vscode.png);
+}
+.flyio .app_img {
+  background-image: url(../img/flyio.png);
+}
+.flyio .app_scouter {
+  /* width: 120px; */
+}
+.javascript .app_img {
+  background-image: url(../img/js.png);
+}
+.css3 .app_img {
+  background-image: url(../img/css3.png);
+}
+.vuejs .app_img {
+  background-image: url(../img/vue.png);
+}
+.computer {
+  width: 30%; height: 30%;
+  position: absolute;
+  bottom: 50px; left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../img/computer.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* responsive max-width 1366px */
+@media only screen and (max-width: 1366px) {
+  .stack_container h1 {
+    font-size: 48px;
+  }
+  .computer {
+    width: 12%;
+    height: 20%;
+  }
+  .stack_apps {
+    position: absolute;
+    width: 150px;
+    height: 65px;
+  }
+  .stack_apps .app_scouter p {
+    font-size: 18px;
+  }
+  .stack_apps .app_scouter .bar {
+    width: 4px;
+    height: 14px;
+  }
+}
+
+/* responsive max-width 989px */
+@media only screen and (max-width: 989px) {
+  .stack_container h1 {
+    font-size: 48px;
+  }
+  .stack .stack_apps {
+    opacity: 1;
+  }
+  .stack .threejs {
+    top: 8% ; left: 15% ;
+  }
+  .stack .html5 {
+    top: 30%; left: 26%;
+  }
+  .stack .nodejs {
+    top: 40%; left: 6%;
+  }
+  .stack .jquery {
+    top: 52%; left: 2%;
+  }
+  .stack .react {
+    top: 60%; left: 10%;
+  }
+  .stack .git {
+    top: 69%; left: 8%;
+  }
+  .stack .firebase {
+    top: 20%; left: 15%;
+  }
+  .stack .github {
+    top: 45%; left: 50%;
+  }
+  .stack .vscode {
+    top: 25%; left: 55%;
+  }
+  .stack .flyio {
+    top: 10%; left: 58%;
+  }
+  .stack .mysql {
+    top: 35%; left: 61%;
+  }
+  .stack .javascript {
+    top: 55%; left: 57%;
+  }
+  .stack .css3 {
+    top: 63%; left: 67%;
+  }
+  .stack .vuejs {
+    top: 72%; left: 67%;
+  }
+  
+
+  .stack:hover .threejs {
+    top: 8% ; left: 15% ;
+  }
+  .stack:hover .html5 {
+    top: 30%; left: 26%;
+  }
+  .stack:hover .nodejs {
+    top: 40%; left: 6%;
+  }
+  .stack:hover .jquery {
+    top: 52%; left: 2%;
+  }
+  .stack:hover .react {
+    top: 60%; left: 10%;
+  }
+  .stack:hover .git {
+    top: 69%; left: 8%;
+  }
+  .stack:hover .firebase {
+    top: 20%; left: 15%;
+  }
+  .stack:hover .github {
+    top: 45%; left: 50%;
+  }
+  .stack:hover .vscode {
+    top: 25%; left: 55%;
+  }
+  .stack:hover .flyio {
+    top: 10%; left: 58%;
+  }
+  .stack:hover .mysql {
+    top: 35%; left: 61%;
+  }
+  .stack:hover .javascript {
+    top: 55%; left: 57%;
+  }
+  .stack:hover .css3 {
+    top: 63%; left: 67%;
+  }
+  .stack:hover .vuejs {
+    top: 72%; left: 67%;
+  }
+  .stack_apps {
+    position: absolute;
+    width: 210px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    top: 550px;
+    left: 50%;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+  }
+  .stack_apps .app_img {
+    width: 40%;
+  }
+  .stack_apps .app_scouter {
+    opacity: 1;
+    width: 100%;
+  }
+  .stack_apps .app_scouter p {
+    font-size: 26px;
+  }
+  .stack_apps .app_scouter .bar {
+    opacity: 1;
+    width: 5px;
+    height: 18px;
+    background-color: #1B64DA;
+    border-radius: 5px;
+    margin-right: 3px;
+    transition: all 0.5s ease-in-out;
+  }
+  .stack_apps .app_scouter .bar_off {
+    background-color: #B0B8C1;
+  }
+  .computer {
+    width: 30%;
+    height: 40%;
+  }
+}
+
+/* responsive max-width 767px */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* responsive max-width 460px */
+@media only screen and (max-width: 460px) {
+  .stack .stack_apps {
+    opacity: 1;
+  }
+  .stack .threejs {
+    top: 8% ; left: 2% ;
+  }
+  .stack .html5 {
+    top: 30%; left: 1%;
+  }
+  .stack .nodejs {
+    top: 40%; left: 6%;
+  }
+  .stack .jquery {
+    top: 52%; left: 2%;
+  }
+  .stack .react {
+    top: 60%; left: 10%;
+  }
+  .stack .git {
+    top: 86%; left: 0%;
+  }
+  .stack .firebase {
+    top: 20%; left: 15%;
+  }
+  .stack .github {
+    top: 45%; left: 50%;
+  }
+  .stack .vscode {
+    top: 25%; left: 55%;
+  }
+  .stack .flyio {
+    top: 10%; left: 58%;
+  }
+  .stack .mysql {
+    top: 35%; left: 61%;
+  }
+  .stack .javascript {
+    top: 55%; left: 57%;
+  }
+  .stack .css3 {
+    top: 63%; left: 58%;
+  }
+  .stack .vuejs {
+    top: 81%; left: 61%;
+  }
+  
+
+  .stack:hover .threejs {
+    top: 8% ; left: 2% ;
+  }
+  .stack:hover .html5 {
+    top: 30%; left: 1%;
+  }
+  .stack:hover .nodejs {
+    top: 40%; left: 6%;
+  }
+  .stack:hover .jquery {
+    top: 52%; left: 2%;
+  }
+  .stack:hover .react {
+    top: 60%; left: 10%;
+  }
+  .stack:hover .git {
+    top: 86%; left: 0%;
+  }
+  .stack:hover .firebase {
+    top: 20%; left: 15%;
+  }
+  .stack:hover .github {
+    top: 45%; left: 50%;
+  }
+  .stack:hover .vscode {
+    top: 25%; left: 55%;
+  }
+  .stack:hover .flyio {
+    top: 10%; left: 58%;
+  }
+  .stack:hover .mysql {
+    top: 35%; left: 61%;
+  }
+  .stack:hover .javascript {
+    top: 55%; left: 57%;
+  }
+  .stack:hover .css3 {
+    top: 63%; left: 58%;
+  }
+  .stack:hover .vuejs {
+    top: 81%; left: 61%;
+  }
+
+  .stack_apps {
+    position: absolute;
+    width: 210px;
+    height: 65px;
+    display: flex;
+    justify-content: flex-start;
+    top: 550px;
+    left: 50%;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+  }
+  .stack_apps .app_img {
+    width: 20%;
+  }
+  .stack_apps .app_scouter {
+    opacity: 1;
+    width: 40%;
+  }
+  .stack_apps .app_scouter p {
+    font-size: 16px;
+  }
+  .stack_apps .app_scouter .bar {
+    opacity: 1;
+    width: 4px;
+    height: 16px;
+    background-color: #1B64DA;
+    border-radius: 5px;
+    margin-right: 3px;
+    transition: all 0.5s ease-in-out;
+  }
+  .stack_apps .app_scouter .bar_off {
+    background-color: #B0B8C1;
+  }
+  .stack_container h1 {
+    font-size: 32px;
+  }
+  
+  .computer {
+      height: 30%;
+  }
+
+
+}
